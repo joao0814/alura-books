@@ -6,6 +6,7 @@ export const PesquisaContainer = styled.section`
   padding 85px 0;
   height: 270vh;
   width: 100%;
+  margim-bottom: 20px;
   `;
 
 export const Titulo = styled.h2`
@@ -20,4 +21,24 @@ export const SubTitulo = styled.h3`
   font-size: 16px;
   font-weight: 500;
   margim-bottom: 0 40px;
+`;
+
+export const ContainerLivro = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margim-bottom: 20px;
+  cursor: pointer;
+
+  p {
+    width: 200px;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  &:hover {
+    border: 1px solid white;
+  }
 `;

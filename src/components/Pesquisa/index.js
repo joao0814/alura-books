@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Input from "../Input";
-import { PesquisaContainer, SubTitulo, Titulo } from "./styles";
+import { ContainerLivro, PesquisaContainer, SubTitulo, Titulo } from "./styles";
 import { livros } from "./dadosPesquisa";
 
 export default function Pesquisa() {
@@ -24,13 +24,14 @@ export default function Pesquisa() {
         placeholder={"Digite o  nome do livro"}
       />
 
-      {/* <div>
-        {livrosPesquisados.map((livros) => (
-          <div key={livros.id}>
-            <img src={livros.src} alt={livros.name} />
-          </div>
+      <div>
+        {livrosPesquisados.map((livro) => (
+          <ContainerLivro key={livro.id}>
+            <img src={livro.src} alt={livro.name} />
+            <SubTitulo>{livro.name}</SubTitulo>
+          </ContainerLivro>
         ))}
-      </div> */}
+      </div>
     </PesquisaContainer>
   );
 }
