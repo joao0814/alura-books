@@ -1,15 +1,16 @@
 import { useState } from "react";
 import Input from "../Input";
-import { ContainerLivro, PesquisaContainer, SubTitulo, Titulo } from "./styles";
 import { livros } from "./dadosPesquisa";
+import * as S from "./styles";
+import Titulo from "../Titulo";
 
 export default function Pesquisa() {
   const [livrosPesquisados, setLivrosPesquisados] = useState(livros);
 
   return (
-    <PesquisaContainer>
-      <Titulo>Já sabe por onde começar?</Titulo>
-      <SubTitulo>Encontre seu livro em nossa estante</SubTitulo>
+    <S.PesquisaContainer>
+      <S.Titulo>"Já sabe por onde começar?"</S.Titulo>
+      <S.SubTitulo>Encontre seu livro em nossa estante</S.SubTitulo>
       <Input
         type="text"
         onBlur={(e) => {
@@ -26,12 +27,12 @@ export default function Pesquisa() {
 
       <div>
         {livrosPesquisados.map((livro) => (
-          <ContainerLivro key={livro.id}>
+          <S.ContainerLivro key={livro.id}>
             <img src={livro.src} alt={livro.name} />
-            <SubTitulo>{livro.name}</SubTitulo>
-          </ContainerLivro>
+            <S.SubTitulo>{livro.name}</S.SubTitulo>
+          </S.ContainerLivro>
         ))}
       </div>
-    </PesquisaContainer>
+    </S.PesquisaContainer>
   );
 }

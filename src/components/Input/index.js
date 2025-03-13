@@ -1,9 +1,9 @@
-import { InputStyle } from "./styles";
+import * as S from "./styles";
 
 export default function Input({ type, value, onBlur, placeholder }) {
   return (
     <div>
-      <InputStyle
+      <S.InputStyle
         type={type}
         value={value}
         onBlur={onBlur}

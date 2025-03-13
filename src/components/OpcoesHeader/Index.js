@@ -1,11 +1,11 @@
-import { LiContainer, UlContainer } from "./styles";
+import * as S from "./styles";
 
 export default function OpcoesHeader({ text }) {
   return (
-    <UlContainer>
+    <S.UlContainer>
       {text.map((text, index) => (
-        <LiContainer key={index}>{text}</LiContainer>
+        <S.LiContainer key={index}>{text}</S.LiContainer>
       ))}
-    </UlContainer>
+    </S.UlContainer>
   );
 }

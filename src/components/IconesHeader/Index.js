@@ -1,13 +1,14 @@
 import { LiContainer, UlContainer } from "./styles";
+import * as S from "./styles";
 
 export default function IconesHeader({ icon }) {
   return (
-    <UlContainer className="icones">
+    <S.UlContainer className="icones">
       {icon.map((icon) => (
-        <LiContainer className="icone">
+        <S.LiContainer className="icone">
           <img src={icon}></img>
-        </LiContainer>
+        </S.LiContainer>
       ))}
-    </UlContainer>
+    </S.UlContainer>
   );
 }
